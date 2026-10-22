@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Espaço-Tempo · Lição 1: Relatividade</title>
+<meta name="description" content="Lição 1 de Espaço-Tempo, um livro sobre a Teoria da Relatividade. As figuras se erguem da página como esculturas desenhadas a tinta: relógios de luz, um vagão de Einstein e um tecido curvado pela massa." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2323406f%27/%3E%3Cpath d=%27M6 22 L16 8 L26 22 M10 22 L16 14 L22 22%27 stroke=%27%23f6efe0%27 stroke-width=%272.4%27 fill=%27none%27/%3E%3C/svg%3E" />
+</head>
+<body>
+<canvas id="gl" aria-label="Livro 3D aberto sobre a mesa"></canvas>
+<p id="mark">Espaço-Tempo · Lição 1</p>
+
+<div id="intro" role="presentation">
+  <div>
+    <p class="brand">Espaço-Tempo</p>
+    <p class="sub">LIÇÃO 1</p>
+    <p class="name">Teoria da Relatividade</p>
+  </div>
+</div>
+
+<div id="zoom" role="group" aria-label="Zoom">
+  <button id="zIn" aria-label="Aproximar"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  <button id="zOut" aria-label="Afastar"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  <button id="zReset" aria-label="Voltar ao enquadramento original"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 8V4h4M16 12v4h-4M4 4l4.5 4.5M16 16l-4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+</div>
+
+<div id="ui">
+  <section id="sheet" aria-label="Texto do capítulo">
+    <button id="sheetHead" aria-expanded="false"><span id="sheetTitle">Sumário</span><svg class="chev" viewBox="0 0 12 8" width="12" height="8" aria-hidden="true"><path d="M1 7 6 2l5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    <div id="sheetControls"></div>
+    <div id="sheetBody"></div>
+  </section>
+  <nav id="bar" aria-label="Navegação do livro">
+    <button id="bToc" aria-label="Sumário"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    <button id="bPrev" aria-label="Página anterior"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    <button id="bPlay" aria-label="Ver a demonstração de novo"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M6 4v12l10-6z" fill="currentColor"/></svg></button>
+    <span id="barTitle">Sumário</span>
+    <button id="bNext" aria-label="Próxima página"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    <button id="bStill" aria-label="Modo parado (para todo o movimento)" aria-pressed="false"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor"/></svg></button>
+  </nav>
+</div>
+
+<div id="nowebgl" hidden>
+  <h2>Este livro precisa de WebGL</h2>
+  <p>Seu navegador não conseguiu iniciar os gráficos 3D. Tente uma versão recente do Chrome, Edge, Firefox ou Safari e ative a aceleração de hardware.</p>
+</div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;background:#fff;text-align:center">Espaço-Tempo precisa de JavaScript para abrir o livro.</p></noscript>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
